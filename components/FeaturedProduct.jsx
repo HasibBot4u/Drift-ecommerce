@@ -49,6 +49,7 @@ export default function FeaturedProduct() {
               src={activeImage} 
               alt="Nike Air Main" 
               fill 
+              referrerPolicy="no-referrer"
               className="object-cover object-top" 
             />
           </div>
@@ -62,7 +63,7 @@ export default function FeaturedProduct() {
                 } bg-white shadow-sm hover:shadow-md`}
               >
                 <div className="relative w-full h-full rounded-xl overflow-hidden">
-                  <Image src={img} alt={`Thumbnail ${idx}`} fill className="object-cover object-top" />
+                  <Image src={img} alt={`Thumbnail ${idx}`} fill referrerPolicy="no-referrer" className="object-cover object-top" />
                 </div>
               </div>
             ))}

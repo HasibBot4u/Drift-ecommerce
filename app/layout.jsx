@@ -16,8 +16,12 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "DRIFY — Streetwear. Redefined.",
+  title: "DRIFT — Streetwear. Redefined.",
   description: "Bold looks. Clean fits. Built to stand out anywhere.",
+  openGraph: {
+    title: "DRIFT — Streetwear. Redefined.",
+    description: "Bold looks. Clean fits. Built to stand out anywhere.",
+  },
 };
 
 export default function RootLayout({ children }) {

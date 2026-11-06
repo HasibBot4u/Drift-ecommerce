@@ -136,7 +136,16 @@ export default function VideoCutout({ src, className }) {
         playsInline
         autoPlay
         preload="auto"
-        className="hidden"
+        aria-hidden="true"
+        style={{
+          position: "fixed",
+          top: -9999,
+          left: -9999,
+          width: 1,
+          height: 1,
+          opacity: 0,
+          pointerEvents: "none",
+        }}
       />
       <canvas ref={canvasRef} className={className} />
     </>

@@ -56,19 +56,19 @@ export default function Testimonials() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16 md:mb-24">
           <h2 className="test-reveal text-5xl md:text-6xl lg:text-7xl font-bold text-ink leading-[1.05] tracking-tight max-w-2xl font-sans">
-            Every Pair Tells A <br /> Story Here's Theirs
+            Every Pair Tells A <br /> Story Here&apos;s Theirs
           </h2>
 
           <div className="test-reveal flex items-center gap-6 pb-2">
             <div className="flex -space-x-4">
               <div className="relative w-12 h-12 rounded-full border-[3px] border-white overflow-hidden shadow-sm">
-                <Image src="/others/146c86a67aec1b902ab4ecef836dfb04.jpg" alt="Avatar 1" fill className="object-cover" />
+                <Image src="/others/146c86a67aec1b902ab4ecef836dfb04.jpg" alt="Avatar 1" fill referrerPolicy="no-referrer" className="object-cover" />
               </div>
               <div className="relative w-12 h-12 rounded-full border-[3px] border-white overflow-hidden shadow-sm">
-                <Image src="/others/38a22370fd90c4ec6b9f40ba1c0b0d01.jpg" alt="Avatar 2" fill className="object-cover" />
+                <Image src="/others/38a22370fd90c4ec6b9f40ba1c0b0d01.jpg" alt="Avatar 2" fill referrerPolicy="no-referrer" className="object-cover" />
               </div>
               <div className="relative w-12 h-12 rounded-full border-[3px] border-white overflow-hidden shadow-sm">
-                <Image src="/others/517ffdbc33620528524824c768da0933.jpg" alt="Avatar 3" fill className="object-cover" />
+                <Image src="/others/517ffdbc33620528524824c768da0933.jpg" alt="Avatar 3" fill referrerPolicy="no-referrer" className="object-cover" />
               </div>
             </div>
             <div className="flex flex-col gap-0.5">
@@ -109,7 +109,7 @@ export default function Testimonials() {
 
               <div className="flex items-center gap-4 mt-auto">
                 <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 shadow-sm">
-                  <Image src={item.avatar} alt={item.name} fill className="object-cover" />
+                  <Image src={item.avatar} alt={item.name} fill referrerPolicy="no-referrer" className="object-cover" />
                 </div>
                 <div>
                   <h4 className="font-bold text-ink text-lg tracking-tight">{item.name}</h4>

@@ -14,6 +14,11 @@ export default function Preloader() {
 
     const finish = () => setHiding(true);
     const video = videoRef.current;
+    if (video) {
+      video.muted = true;
+      video.defaultMuted = true;
+      video.play?.().catch(() => {});
+    }
     video?.addEventListener("ended", finish);
     const fallback = setTimeout(finish, FALLBACK_MS);
 

@@ -179,7 +179,6 @@ export default function ProductShowcase() {
     flipState.current = null;
   }, [order]);
 
-  // Set up an infinite interval for automatic carousel play
   useEffect(() => {
     const timer = setInterval(() => {
       if (!isAnimatingRef.current) {
@@ -187,6 +186,7 @@ export default function ProductShowcase() {
       }
     }, 3000);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [order]);
 
   // Parallax effect on scroll
@@ -207,22 +207,22 @@ export default function ProductShowcase() {
   }, []);
 
   return (
-    <section id="shop" className="showcase-section relative h-screen w-full bg-white">
+    <section id="shop" className="showcase-section relative min-h-screen lg:h-screen w-full bg-white">
       <div className="grid h-full min-h-0 grid-cols-1 lg:grid-cols-[62%_38%]">
-        <div className="relative flex min-h-0 flex-col bg-white">
+        <div className="relative flex min-h-0 flex-col bg-white h-[440px] sm:h-[540px] lg:h-full">
           <Navbar variant="shop" />
 
-          <div className="relative flex min-h-0 flex-1 items-end justify-center overflow-hidden px-6 py-6 main-img-container">
+          <div className="relative flex min-h-0 flex-1 items-end justify-center overflow-hidden px-4 sm:px-6 py-6 main-img-container">
             <button
               type="button"
               onClick={prev}
-              className="absolute left-6 top-1/2 z-40 -translate-y-1/2 text-sm font-semibold tracking-wide text-ink/60 transition-colors hover:text-ink md:left-10"
+              className="absolute left-4 sm:left-6 md:left-10 top-1/2 z-40 -translate-y-1/2 text-sm font-semibold tracking-wide text-ink/60 transition-colors hover:text-ink"
             >
               ‹ PREV
             </button>
 
             {/* Q2 Thumbnail */}
-            <div className="pointer-events-none absolute bottom-6 left-6 z-10 h-[42%] w-[120px]">
+            <div className="pointer-events-none absolute bottom-6 left-3 sm:left-6 z-10 h-[36%] sm:h-[42%] w-[85px] sm:w-[120px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={q2Product.image}
@@ -236,7 +236,7 @@ export default function ProductShowcase() {
             </div>
 
             {/* Q1 Thumbnail */}
-            <div className="pointer-events-none absolute bottom-6 left-[94px] z-20 h-[58%] w-[160px]">
+            <div className="pointer-events-none absolute bottom-6 left-[60px] sm:left-[94px] z-20 h-[50%] sm:h-[58%] w-[115px] sm:w-[160px]">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={q1Product.image}

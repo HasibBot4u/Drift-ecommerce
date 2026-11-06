@@ -56,6 +56,7 @@ export default function Footer() {
                 src="/others/9e63a89253fd2a7372e9e4732a586374.jpg" 
                 alt="Brand Vibe" 
                 fill 
+                referrerPolicy="no-referrer"
                 className="object-cover" 
               />
             </div>
